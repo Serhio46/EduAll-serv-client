@@ -11,7 +11,7 @@ const CreatePostCard: FC = () => {
 		<Paper elevation={5}
 			sx={{
 				padding: '10px',
-				width: '550px',
+				width: '580px',
 				height: '150px',
 				display: 'flex',
 				flexDirection: 'column',

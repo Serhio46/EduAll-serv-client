@@ -10,7 +10,7 @@ const PostCard: FC = () => {
 			sx={{
 				marginTop: '25px',
 				padding: '10px',
-				width: '550px',
+				width: '580px',
 				height: '500px',
 				display: 'flex',
 				flexDirection: 'column',
