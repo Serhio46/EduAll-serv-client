@@ -56,7 +56,7 @@ const CreatePostCard: FC = () => {
 					}}
 				>
 					<IconButton>
-						<AddAPhotoIcon color='error' />
+						<AddAPhotoIcon htmlColor='tomato' />
 					</IconButton>
 					<Typography
 						sx={{
@@ -72,7 +72,7 @@ const CreatePostCard: FC = () => {
 					}}
 				>
 					<IconButton>
-						<TagIcon />
+						<TagIcon htmlColor='blue' />
 					</IconButton>
 					<Typography
 						sx={{
@@ -88,7 +88,7 @@ const CreatePostCard: FC = () => {
 					}}
 				>
 					<IconButton>
-						<AddLocationAltIcon color='success' />
+						<AddLocationAltIcon htmlColor='green' />
 					</IconButton>
 					<Typography
 						sx={{
@@ -104,7 +104,7 @@ const CreatePostCard: FC = () => {
 					}}
 				>
 					<IconButton>
-						<SentimentSatisfiedAltIcon color='secondary' />
+						<SentimentSatisfiedAltIcon htmlColor='goldenrod' />
 					</IconButton>
 					<Typography
 						sx={{

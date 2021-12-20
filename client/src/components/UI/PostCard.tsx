@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Paper, Box, Divider, Avatar, Typography, IconButton, TextField } from '@material-ui/core';
+import { FC } from 'react';
+import { Paper, Box, Avatar, Typography, IconButton } from '@material-ui/core';
 import PersonIcon from '@mui/icons-material/Person';
 import RecommendIcon from '@mui/icons-material/Recommend';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -60,8 +60,12 @@ const PostCard: FC = () => {
 					mt: '10px',
 				}}>
 				<Box>
-					<RecommendIcon />
-					<FavoriteIcon />
+					<IconButton>
+						<RecommendIcon htmlColor='blue' />
+					</IconButton>
+					<IconButton>
+						<FavoriteIcon htmlColor='red' />
+					</IconButton>
 				</Box>
 				<Typography
 					sx={{
