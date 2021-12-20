@@ -2,6 +2,7 @@ import Main from '../pages/Main';
 import StudentMain from '../pages/StudentMain';
 import TeacherMain from '../pages/TeacherMain';
 import Profile from '../pages/MyProfile';
+import Friends from '../pages/Friends';
 
 export interface IRoute {
 	path: string;
@@ -14,6 +15,7 @@ export enum RoutesName {
 	STUDENT_MAIN = '/student',
 	TEACHER_MAIN = '/teacher',
 	PROFILE = '/profile',
+	FRIENDS = '/friends',
 }
 
 export const publicRoutes: IRoute[] = [
@@ -22,7 +24,8 @@ export const publicRoutes: IRoute[] = [
 
 export const studentRoutes: IRoute[] = [
 	{ path: RoutesName.STUDENT_MAIN, component: StudentMain },
-	{ path: RoutesName.PROFILE, component: Profile }
+	{ path: RoutesName.PROFILE, component: Profile },
+	{ path: RoutesName.FRIENDS, component: Friends },
 ];
 
 export const teacherRoutes: IRoute[] = [

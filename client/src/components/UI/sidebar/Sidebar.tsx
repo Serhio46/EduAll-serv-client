@@ -17,7 +17,7 @@ const SideBar: FC = () => {
 			<List sx={{ padding: '0' }} >
 				<Link to='/student'><SideBarItem image={<RssFeed />} title={'News'} /></Link>
 				<Link to='/profile'><SideBarItem image={<PersonIcon />} title={'MyProfile'} /></Link>
-				<SideBarItem image={<Group />} title={'Friends'} />
+				<Link to='/friends'><SideBarItem image={<Group />} title={'Friends'} /></Link>
 				<SideBarItem image={<Message />} title={'Messages'} />
 				<SideBarItem image={<Groups />} title={'Groups'} />
 				<SideBarItem image={<School />} title={'Courses'} />

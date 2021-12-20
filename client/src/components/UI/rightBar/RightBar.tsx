@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { Box, Divider, Avatar, Typography } from '@material-ui/core';
-import Badge from '@mui/material/Badge';
+import { Box, Divider, Typography } from '@material-ui/core';
+import UserInfoShort from '../UserInfoShort';
+
 
 const RightBar: FC = () => {
 	return (
@@ -11,24 +12,7 @@ const RightBar: FC = () => {
 				<Typography
 					sx={{ m: '10px 0' }}
 				>Online Friends</Typography>
-				<Box sx={{
-				}}>
-					<Box sx={{
-						m: '10px 10px 0 0',
-						display: 'flex',
-						alignItems: 'center',
-					}}>
-						<Badge variant="dot" color='error'
-							sx={{ mr: '10px' }}
-						>
-							<Avatar></Avatar>
-						</Badge>
-						<Typography
-							variant='h6'
-							component='span'
-						>Nick Name</Typography>
-					</Box>
-				</Box>
+				<UserInfoShort />
 			</Box>
 		</Box>
 	)
