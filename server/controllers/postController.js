@@ -9,7 +9,6 @@ class postController {
 			const newPost = new Post(req.body);
 			await newPost.save();
 			return res.status(200).json(newPost);
-
 		} catch (error) {
 			res.status(500).json(error)
 		}
@@ -67,14 +66,26 @@ class postController {
 		}
 	}
 
+	async getUserPosts(req, res) {
+		try {
+			let totalPosts = [];
+			const userId = req.params.userId;
+			const data = await Post.find({ userId: userId });
+			totalPosts = [...data];
+			res.status(200).json(totalPosts);
+		} catch (error) {
+			res.status(500).json(error);
+		}
+	}
+
 	async getFollowingsPosts(req, res) {
 		try {
 			let totalPosts = [];
-			const { userId } = req.body;
-			const currentUser = await User.findById(userId);
+			const userId = req.params.userId;
+			const currentUser = await User.findOne({ userId });
 			const followings = currentUser.followings;
 			followings.forEach(async followingId => {
-				const { data } = await Post.findAll({ userId: followingId });
+				const { data } = await Post.find({ userId: followingId });
 				totalPosts = [...totalPosts, ...data];
 			});
 			res.status(200).json(totalPosts);

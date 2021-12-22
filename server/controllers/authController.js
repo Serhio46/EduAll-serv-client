@@ -24,6 +24,7 @@ class authController {
 			const hashPassword = await bcrypt.hash(password, 8);
 			const userRole = await Role.findOne({ value: roles });
 
+			if (!userName) userName = email;
 			const user = new User({ email, password: hashPassword, roles: [userRole.value], userName });
 			await user.save();
 			const token = jwt.sign({ id: user._id }, config.get('secretKey'), { expiresIn: "1h" });

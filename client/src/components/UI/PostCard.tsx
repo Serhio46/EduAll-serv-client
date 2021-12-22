@@ -4,7 +4,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import RecommendIcon from '@mui/icons-material/Recommend';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const PostCard: FC = () => {
+interface PropsPostCard {
+	title: string;
+	author: string | undefined;
+}
+
+const PostCard: FC<PropsPostCard> = ({ title, author }) => {
 	return (
 		<Paper elevation={5}
 			sx={{
@@ -33,7 +38,7 @@ const PostCard: FC = () => {
 				<Typography
 					variant='h6'
 					component='span'
-				>Siarhei Shapavalau</Typography>
+				>{author}</Typography>
 				<Typography
 					sx={{
 						pl: '15px'
@@ -44,7 +49,7 @@ const PostCard: FC = () => {
 				sx={{
 					marginTop: '5px',
 				}}>
-				Make new social app for students!!!</Typography>
+				{title}</Typography>
 			<Box
 				sx={{
 					marginTop: '25px',

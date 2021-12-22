@@ -7,4 +7,5 @@ export interface IUser {
 	courses: string[];
 	followers: string[];
 	followings: string[];
+	city: string
 }

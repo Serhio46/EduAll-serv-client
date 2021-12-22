@@ -1,8 +1,12 @@
 import React, { FC } from 'react';
 import { Box, Paper, Divider, Avatar, Typography, Button } from '@material-ui/core';
 import Feed from '../feeds/Feed';
+import { useTypedSelector } from '../../../hooks/useTypedSelector';
 
 const ProfileMain: FC = () => {
+
+	const { user } = useTypedSelector(({ authReducer }) => authReducer);
+
 	return (
 		<Box sx={{
 			display: 'flex',
@@ -28,7 +32,11 @@ const ProfileMain: FC = () => {
 				display: 'flex',
 				flexDirection: 'column',
 			}}>
+				<Typography>{user.userName}</Typography>
+				<Typography>{user.roles[0]}</Typography>
+				<Typography>City {user.city}</Typography>
 				<Typography>Main Info</Typography>
+
 			</Paper>
 			<Paper elevation={5} sx={{
 				padding: '10px',

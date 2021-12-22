@@ -14,7 +14,7 @@ export enum RoutesName {
 	MAIN = '/',
 	STUDENT_MAIN = '/student',
 	TEACHER_MAIN = '/teacher',
-	PROFILE = '/profile',
+	PROFILE = '/profile/:username',
 	FRIENDS = '/friends',
 }
 

@@ -7,6 +7,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useTypedSelector } from '../../../hooks/useTypedSelector';
 import { AuthActionCreators } from '../../../store/reducers/auth/authActions';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { BestModalContext } from '../../BestModal/BestModalContext';
 import SignInForm from '../../BestModal/SignInForm';
@@ -49,12 +50,14 @@ const Header: FC = () => {
 							alignItems: 'center'
 						}}
 					>
-						<Typography
-							variant='h6'
-							component='span'
-						>
-							EDUforALL
-						</Typography>
+						<Link to='/student'>
+							<Typography
+								variant='h6'
+								component='span'
+							>
+								EDUforALL
+							</Typography>
+						</Link>
 						<Search />
 					</Box>
 					{isAuth ?

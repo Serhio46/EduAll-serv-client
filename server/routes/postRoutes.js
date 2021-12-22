@@ -14,5 +14,6 @@ router.put('/:id/like', postController.likePost);
 //get a post
 router.get('/:id', postController.getOnePost);
 //get all followings posts 
-router.get('/', postController.getFollowingsPosts);
+router.get('/allposts/:userId', postController.getFollowingsPosts);
+router.get('/myposts/:userId', postController.getUserPosts);
 module.exports = router;

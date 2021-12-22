@@ -2,6 +2,7 @@ const { Schema, model, ObjectId } = require('mongoose');
 
 const Post = Schema({
 	userId: { type: String, required: true },
+	author: String,
 	title: { type: String, required: true },
 	desc: { type: String, max: 500 },
 	image: { type: String },

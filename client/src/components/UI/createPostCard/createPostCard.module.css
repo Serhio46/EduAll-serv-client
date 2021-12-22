@@ -1,0 +1,13 @@
+.form{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.label{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+}
+
